@@ -39,7 +39,7 @@ def send_string(value):
         print("Not connected")
         return
     if value:
-        telnet.write(value, 'utf-8')
+        telnet.write(value)
 
 
 def get_user_input():
