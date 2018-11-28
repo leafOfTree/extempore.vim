@@ -50,22 +50,9 @@ augroup extemporeMaps
   autocmd FileType extempore nnoremap <buffer> <Leader>x :ExtemporeCloseConnection() <CR>
   autocmd FileType extempore nnoremap <buffer> <Leader>w :ExtemporeSendEnclosingBlock() <CR>
   autocmd FileType extempore nnoremap <buffer> <Leader>a :ExtemporeSendEntireFile() <CR>
+  autocmd FileType extempore nnoremap <buffer> <Leader>b :ExtemporeSendBracketSelection()<CR>
   autocmd FileType extempore nnoremap <buffer> <Leader>s :ExtemporeSendSelection() <CR>
-
-  autocmd FileType extempore nnoremap <buffer> <F12> :ExtemporeSendUserInput()<CR>
-
-  autocmd FileType extempore nnoremap <buffer> <Bar> :ExtemporeSendEntireFile()<CR>
-  autocmd FileType extempore nnoremap <buffer> <BS> :ExtemporePanic()<CR>
-
-  autocmd FileType extempore nnoremap <buffer> ] :ExtemporeSendBracketSelection()<CR>
-
-  autocmd FileType extempore nnoremap <buffer> <Return> :ExtemporeSendSelection()<CR>
-  autocmd FileType extempore xnoremap <buffer> <Return> <C-c> :ExtemporeSendSelection()<CR>
-
-  autocmd FileType extempore nnoremap <buffer> <Tab> :ExtemporeSendEnclosingBlock()<CR>
-  autocmd FileType extempore nnoremap <buffer> <S-Tab> :ExtemporeSendEnclosingBlock()<CR>
-  autocmd FileType extempore xnoremap <buffer> <S-Tab> <C-c>:ExtemporeSendEnclosingBlock()<CR>
-  autocmd FileType extempore inoremap <buffer> <S-Tab> <Esc>:ExtemporeSendEnclosingBlock()<CR>
+  autocmd FileType extempore nnoremap <buffer> <Leader>u :ExtemporeSendUserInput() <CR>
   autocmd BufUnload *.xtm :ExtemporeCloseConnection()<CR>
 augroup END
 
